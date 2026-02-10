@@ -1,0 +1,6 @@
+# Hello World in LLL (LUXBIN Light Language)
+println("Hello, World!")
+println("Welcome to LLL — the LUXBIN Light Language")
+
+let name = "LUXBIN"
+println("Built by " + name)

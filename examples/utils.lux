@@ -1,0 +1,11 @@
+# Utility module for LLL — demonstrates the import system
+
+func double(x)
+  return x * 2
+end
+
+func greet(name)
+  println("Hello, " + name + "!")
+end
+
+const VERSION = "1.0"

@@ -1,0 +1,12 @@
+# HTTP Fetch example in LLL
+# Note: requires network access
+
+println("Fetching data from httpbin.org...")
+
+try
+  let response = net_fetch_json("https://httpbin.org/get")
+  println("Response received!")
+  println(to_string(response))
+catch err
+  println("Network error: " + err)
+end

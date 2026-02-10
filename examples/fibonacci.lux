@@ -1,0 +1,14 @@
+# Fibonacci sequence in LLL
+
+func fib(n)
+  if n <= 1 then
+    return n
+  end
+  return fib(n - 1) + fib(n - 2)
+end
+
+# Print first 20 fibonacci numbers
+println("Fibonacci sequence:")
+for i in range(20) do
+  println("fib(" + to_string(i) + ") = " + to_string(fib(i)))
+end

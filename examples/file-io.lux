@@ -1,0 +1,29 @@
+# File I/O example in LLL
+
+let filename = "/tmp/lll-test-output.txt"
+
+# Write to file
+fs_write(filename, "Hello from LLL!\nLine 2\nLine 3\n")
+println("Wrote to " + filename)
+
+# Read it back
+let content = fs_read(filename)
+println("File contents:")
+println(content)
+
+# Append to file
+fs_append(filename, "Appended line\n")
+println("Appended to file")
+
+# Read again
+let updated = fs_read(filename)
+println("Updated contents:")
+println(updated)
+
+# Check existence
+println("File exists: " + to_string(fs_exists(filename)))
+println("Fake file exists: " + to_string(fs_exists("/tmp/nonexistent-lll.txt")))
+
+# Clean up
+fs_remove(filename)
+println("Cleaned up temp file")

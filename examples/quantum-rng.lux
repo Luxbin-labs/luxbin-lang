@@ -1,0 +1,32 @@
+# Quantum Random Number Generator in LLL
+
+println("=== Quantum RNG ===")
+
+# Create a superposition of states
+let states = superpose([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+println("Superposition: " + to_string(states))
+
+# Collapse the superposition via measurement
+println("")
+println("Measuring 10 times:")
+for i in range(10) do
+  let result = measure(states)
+  println("  Measurement " + to_string(i + 1) + ": " + to_string(result))
+end
+
+# Hadamard gate - coin flip
+println("")
+println("Hadamard coin flips:")
+for i in range(5) do
+  let flip = hadamard(0)
+  if flip == 0 then
+    println("  Heads")
+  else
+    println("  Tails")
+  end
+end
+
+# Entanglement
+println("")
+let pair = entangle("Alice", "Bob")
+println("Entangled pair: " + to_string(pair))

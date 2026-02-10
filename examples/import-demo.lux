@@ -1,0 +1,7 @@
+# Import system demo in LLL
+
+import "utils.lux"
+
+greet("World")
+println("Double of 21 = " + to_string(double(21)))
+println("Utils version: " + VERSION)

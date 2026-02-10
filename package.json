@@ -1,0 +1,37 @@
+{
+  "name": "luxbin-lang",
+  "version": "1.0.0",
+  "description": "The LUXBIN programming language — a modern scripting language with quantum simulation and photonic encoding",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "bin": {
+    "luxbin": "./dist/bin/luxbin.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "language",
+    "interpreter",
+    "quantum",
+    "photonic",
+    "luxbin",
+    "scripting"
+  ],
+  "author": "Nichole Christie",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
+}
